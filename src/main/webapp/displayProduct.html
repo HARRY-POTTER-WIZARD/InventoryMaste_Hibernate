@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 id="username">Product List</h2>
+    <a href="AddPro.html">Add New Product</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>category</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="productstable"></tbody>
+    </table>
+    <p id="message"></p>
+
+    <script>
+        const baseUrl = window.location.pathname.includes('InventoryMaster') ? '/InventoryMaster' : '';
+        const productUrl = `${baseUrl}/produtcs`;
+
+        function loadProducts() {
+            fetch(productUrl)
+                .then(response => response.json())
+                .then(data => {
+                	 console.log('Raw response data:', data);
+                    const products = data.Products;
+                    const tableBody = document.getElementById('productstable');
+                    tableBody.innerHTML = '';
+                    products.forEach(pro => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${pro.id}</td>
+                            <td>${pro.name}</td>
+                            <td>${pro.category}</td>
+                            
+                            <td>${pro.price}</td>
+                            <td>${pro.quantity}</td>
+                            <td>
+                                <a href="updatePro.html?id=${pro.id}">Edit</a>
+                                <button onclick="deleteProduct(${pro.id})">Delete</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    document.getElementById('message').textContent = 'Error loading Product: ' + error.message;
+                });
+        }
+
+        function deleteProduct(id) {
+            if (confirm('Are you sure you want to delete this Product?')) {
+                const formData = new FormData();
+                formData.append('action', 'delete');
+                formData.append('id', id);
+                fetch(productUrl, {
+                    method: 'POST',
+                    body: new URLSearchParams(formData), // Convert FormData to URL-encoded string
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded' // Set correct content type
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        document.getElementById('message').textContent = data.error === 'Invalid action' ? 'Invalid' : data.error;
+                    } else {
+                        document.getElementById('message').textContent = data.message;
+                        loadProducts();
+                    }
+                });
+            }
+        }
+
+        loadProducts();
+    </script>
+</body>
+</html>
