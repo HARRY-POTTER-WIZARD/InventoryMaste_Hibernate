@@ -62,17 +62,21 @@ InventoryMaster_Hibernate/
 ## 📸 Screenshots
 1. **Display Product**
    
-![Image 1]([Screenshot 2025-04-12 085621.png](https://github.com/HARRY-POTTER-WIZARD/InventoryMaste_Hibernate/blob/main/Screenshot%202025-04-12%20085621.png))
+![image](https://github.com/user-attachments/assets/7b8152b4-ec36-4f08-8ce9-a24e842d6fbe)
+
 
 2. **Add Product**
 
-![Image 2]([Screenshot 2025-04-12 085639.png](https://github.com/HARRY-POTTER-WIZARD/InventoryMaste_Hibernate/blob/main/Screenshot%202025-04-12%20085639.png))
+![image](https://github.com/user-attachments/assets/a1619817-f27d-4555-b73a-35a9fce5b600)
+
 3. **Update Product**
 
-![Image 3]([Screenshot 2025-04-12 085702.png](https://github.com/HARRY-POTTER-WIZARD/InventoryMaste_Hibernate/blob/main/Screenshot%202025-04-12%20085702.png))
-4. **Delete Product**
+![image](https://github.com/user-attachments/assets/84ffb29c-f7ef-47af-986f-e3444d54add6)
 
-![Image 4]([Screenshot 2025-04-12 085719.png](https://github.com/HARRY-POTTER-WIZARD/InventoryMaste_Hibernate/blob/main/Screenshot%202025-04-12%20085719.png))
+4. **Delete Product**
+![image](https://github.com/user-attachments/assets/ce11b305-96c3-41ef-86ee-fe8f70f8f8da)
+
+
 
 
 ## 🧑‍💻 Author
