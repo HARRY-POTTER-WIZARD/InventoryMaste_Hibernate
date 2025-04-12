@@ -61,14 +61,14 @@ InventoryMaster_Hibernate/
 
 ## 📸 Screenshots
 1. **Display Product**
-![Image 1](Screenshot 2025-04-12 085621.png)
+![Image 1]("Screenshot 2025-04-12 085621.png")
 
 2. **Add Product**
-![Image 2](Screenshot 2025-04-12 085639.png)
+![Image 2]("Screenshot 2025-04-12 085639.png")
 3. **Update Product**
-![Image 3](Screenshot 2025-04-12 085702.png)
+![Image 3]("Screenshot 2025-04-12 085702.png")
 4. **Delete Product**
-![Image 4](Screenshot 2025-04-12 085719.png)
+![Image 4]("Screenshot 2025-04-12 085719.png")
 
 
 ## 🧑‍💻 Author
